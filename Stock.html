@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="product">
+        <h2>Product Name</h2>
+        <p>Available Stock: <span class="stock">5</span></p>
+        <button onclick="addToCart()">Add to Cart</button>
+    </div>
+
+    
+    <script>
+        function addToCart() {
+    // Get the available stock for this product
+    const availableStock = parseInt(document.querySelector('.stock').innerText);
+    
+    // Check if there's available stock
+    if (availableStock > 0) {
+        // Decrease the available stock by 1 (simulate adding to cart)
+        const updatedStock = availableStock - 1;
+
+        // Perform the action of adding the product to the cart
+        // Here, you might update the cart data or perform other actions
+        
+        // Update the displayed stock
+        document.querySelector('.stock').innerText = updatedStock;
+
+        // Provide feedback that the product was added to the cart
+        alert('Product added to cart!');
+    } else {
+        // If no stock is available, provide feedback to the user
+        alert('Sorry, this product is out of stock!');
+    }
+}
+
+    </script>
+</body>
+</html>

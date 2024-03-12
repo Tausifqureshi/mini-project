@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Simple Form Validation</h2>
+
+    <form id="myForm" action="https://www.amazon.in">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <span id="nameError" class="error"></span>
+
+        <br>
+
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email">
+        <span id="emailError" class="error"></span>
+
+        <br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        document.getElementById('myForm').addEventListener('submit', validateForm);
+
+        function validateForm(e) {
+            e.preventDefault();
+
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+
+            resetErrors();
+
+            if (!validateName(name) || !validateEmail(email)) {
+                return false;
+            }
+
+            // Submit the form programmatically since validation passed
+            e.target.submit();
+        }
+
+        function resetErrors() {
+            document.getElementById('nameError').innerHTML = '';
+            document.getElementById('emailError').innerHTML = '';
+        }
+
+        function validateName(name) {
+            if (name.trim() === "") {
+                document.getElementById('nameError').innerHTML = 'Name is required';
+                return false;
+            }
+            return true;
+        }
+
+        function validateEmail(email) {
+            if (email.trim() === '') {
+                document.getElementById('emailError').innerHTML = 'Email is required';
+                return false;
+            }
+
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                document.getElementById('emailError').innerHTML = 'Invalid email format';
+                return false;
+            }
+            return true;
+        }
+
+
+
+
+
+        // function storeData() {
+//   // Extract user data from input fields
+//   const userData = {
+//     name: userName.value,
+//     email: userEmail.value,
+//     password: userPassword.value
+//   };
+
+//   // Retrieve existing users from local storage or initialize an empty array if none exist
+//   let users = JSON.parse(localStorage.getItem("userData")) || [];
+
+//   // Check if a user with the same email already exists
+//   const findUser = users.find(user => user.email === userData.email);
+
+//   if (!findUser) {
+//     // If the user doesn't exist, add the new user data to the users array
+//     users.push(userData);
+
+//     // Update the local storage with the new list of users
+//     localStorage.setItem("userData", JSON.stringify(users));
+//   } else {
+//     // If the user already exists, display an alert
+//     alert("Email address already exists");
+//   }
+// }
+
+
+
+
+
+
+const form = document.getElementById("form");
+const userName = document.getElementById("name");
+const userEmail = document.getElementById("email");
+const userPassword = document.getElementById("password");
+
+form.addEventListener("submit", validateForm);
+
+function validateForm(e) {
+  e.preventDefault();
+  resetErrorMessages();
+
+  let isValid = true;
+
+  if (userName.value.trim() === "") {
+    setErrorMsg(userName, "Enter Name");
+    isValid = false;
+  }
+
+  if (userEmail.value.trim() === "") {
+    setErrorMsg(userEmail, "Enter Email");
+    isValid = false;
+  }
+
+  if (userPassword.value.trim() === "") {
+    setErrorMsg(userPassword, "Enter Password");
+    isValid = false;
+  }
+
+  if (isValid) {
+    // Here, you can proceed with form submission or data handling
+    console.log("Form submitted successfully!");
+    // storeData(); // Uncomment this if you have this function defined
+    // form.submit(); // Uncomment this to allow the form to submit
+  }
+}
+
+function resetErrorMessages() {
+  setErrorMsg(userName, "");
+  setErrorMsg(userEmail, "");
+  setErrorMsg(userPassword, "");
+}
+
+function setErrorMsg(inputElement, error) {
+  const formControl = inputElement.parentElement;
+  const errorDisplay = formControl.querySelector(".error");
+  errorDisplay.innerText = error;
+  inputElement.style.borderColor = error ? "red" : "green";
+}
+
+    </script>
+
+</body>
+</html>
+
+
+
+function storeData() {
+    const userData = {
+      name: userName.value,
+      email: userEmail.value,
+      password: userPassword.value,
+    };
+    let users = JSON.parse(localStorage.getItem("userData")) || [];
+    const findUser = users.find((value) => value.email === userData.email);
+  
+    if (!findUser) {
+      users.push(userData);
+      localStorage.setItem("userData", JSON.stringify(users));
+    } else {
+      alert("Email address already exists");
+    }
+  }
+  
+  
+
+  
+  // function storeData() {
+    //   // Extract user data from input fields
+    //   const userData = {
+    //     name: userName.value,
+    //     email: userEmail.value,
+    //     password: userPassword.value
+    //   };
+    
+    //   // Retrieve existing users from local storage or initialize an empty array if none exist
+    //   let users = JSON.parse(localStorage.getItem("userData")) || [];
+    
+    //   // Check if a user with the same email already exists
+    //   const findUser = users.find(user => user.email === userData.email);
+    
+    //   if (!findUser) {
+    //     // If the user doesn't exist, add the new user data to the users array
+    //     users.push(userData);
+    
+    //     // Update the local storage with the new list of users
+    //     localStorage.setItem("userData", JSON.stringify(users));
+    //   } else {
+    //     // If the user already exists, display an alert
+    //     alert("Email address already exists");
+    //   }
+    // }
