@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dropdown Example</title>
+</head>
+<body>
+    <h2>Choose Your Favorite Fruit</h2>
+    <form action="/submit-form" method="get">
+        <label for="fruits">Select a fruit:</label>
+        <select name="favoriteFruit" id="fruits">
+            <option value="apple">Apple</option>
+            <option value="banana">Banana</option>
+            <option value="mango">Mango</option>
+            <option value="grapes">Grapes</option>
+        </select>
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        document.querySelector('form').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+
+            var selectedFruit = document.querySelector('select[name="favoriteFruit"]').value;
+            // alert('You selected: ' + selectedFruit);
+            console.log(event.target)
+        });
+    </script>
+</body>
+</html>

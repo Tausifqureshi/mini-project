@@ -11,7 +11,7 @@
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> -->
 
     <script src="https://kit.fontawesome.com/41ffe90629.js" crossorigin="anonymous"></script>
-    <title>Document</title>
+    <title>sign up in sign in form</title>
 
 </head>
 <body>
@@ -19,30 +19,30 @@
        <div class="container">
        <div class="form-box">
         <h1 id="title">Sign Up</h1>
-        <form action="">
-            <div class="input-group">
 
+         <form action="">
+
+                <div class="input-group">
 
                  <div class="input-field" id="nameField">
                     <i class="fa-solid fa-user icon"></i>
                     <input type="text" placeholder="Name">
                  </div>
 
-         <div class="input-field">
+                 <div class="input-field">
         <i class="fa-solid fa-envelope icon"></i>
         <input type="email" placeholder="Email">
-      </div>
+                 </div>
 
-    <div class="input-field">
+                 <div class="input-field">
        <i class="fa-solid fa-lock icon"></i>
         <input type="password" placeholder="Password">
-    </div> 
-
-               
+                 </div> 
 
                 <p>Lost Password <a href="#">Click Here</a></p>
 
             </div>
+
             <div class="btn-field">
                 <button type="button" id="signupBtn">Sign Up</button>
                 <button type="button"  id="signinBtn" class="disable">Sign In</button>
@@ -62,19 +62,22 @@
         let title =document.getElementById("title");
 
 
-         signinBtn.addEventListener('click',()=>{
-         nameField.style.maxHeight = '0' + 'px';
+        signinBtn.addEventListener('click',()=>{
+        nameField.style.maxHeight = '0' + 'px';
         title.innerHTML ="Sign In"
-        signupBtn.classList.add("disable")
-        signinBtn.classList.remove("disable")
+        signupBtn.classList.add("disable"); //jab bhi sign in button pe click kar re ge tu sign up button ka color and background color change hoga jo hamne css me disable class me diye hai.
+
+        signinBtn.classList.remove("disable");
         })
         //Signup
          signupBtn.addEventListener('click',()=>{
          nameField.style.maxHeight = '65' + 'px';
         // nameField.style.display="block";
         title.innerHTML ="Sign Up"
-        signupBtn.classList.remove("disable")
-        signinBtn.classList.add("disable")
+        signupBtn.classList.remove("disable"); //jab bhi signup button pe click hoga us ke upper se css me disable class me jo bhi hamne color and backgorund color diye hoge us me se delete ho jaye ge or signin button pe add ho jaye ge.
+
+        signinBtn.classList.add("disable");
+
         })
 
        
