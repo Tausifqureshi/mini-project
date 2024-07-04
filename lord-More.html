@@ -172,6 +172,7 @@
 
 
 <script>
+  // ================================== load more code only ============================================//
 // document.addEventListener("DOMContentLoaded", () => {
 //   const loadMoreBtn = document.querySelector("#load-more");
 //   let currentItem = 3;
@@ -199,8 +200,9 @@
 // });
 
 
-// ===========================d===========================================
+// ==================================================================================================//
 //load more ande less then button code ek sath.
+
 document.addEventListener("DOMContentLoaded", () => {
   const loadMoreBtn = document.querySelector("#load-more");
   const seeLessBtn = document.createElement("button");
@@ -228,6 +230,8 @@ document.addEventListener("DOMContentLoaded", () => {
     seeLessBtn.style.display = "inline-block";
   });
 
+
+  // ====================================== Lessthen code =============================================== //
   seeLessBtn.addEventListener("click", () => {
     currentItem -= itemsPerPage;
 
