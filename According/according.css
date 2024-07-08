@@ -1,0 +1,42 @@
+body {
+  background: rgb(255, 215, 255);
+  padding: 40px;
+  line-height: 1.6rem;
+}
+
+.according {
+  width: 50%;
+  background-color: white;
+  padding: 4px 16px;
+  margin: 0 auto;
+  margin-bottom: 16px;
+  cursor: pointer;
+}
+
+.quetion {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.icon {
+  margin-top: 16px;
+  transition: transform 0.2s;
+}
+
+.icon.active {
+  transform: rotate(-180deg);
+}
+.answer {
+  color: #666;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s;
+}
+
+/* .answer.active{
+    max-height: fit-content;
+} */
+
+/* ==================================================================== */
+/* Drop-Down Code Style */
