@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Price Filter</title>
+    <link rel="stylesheet" href="High-to-Low.css">
+   
+</head>
+<body>
+    <div class="filter-container">
+        <select id="priceFilter" onchange="sortProducts()">
+            <option value="default">Sort by Price</option>
+            <option value="lowToHigh">Low to High</option>
+            <option value="highToLow">High to Low</option>
+        </select>
+    </div>
+    <div class="product-list" id="productList">
+        <div class="product" data-price="299">
+            <h3>Product 1</h3>
+            <p class="price">$299</p>
+            <div class="actions">
+                <button>Add to Cart</button>
+            </div>
+        </div>
+        <div class="product" data-price="499">
+            <h3>Product 2</h3>
+            <p class="price">$499</p>
+            <div class="actions">
+                <button>Add to Cart</button>
+            </div>
+        </div>
+        <div class="product" data-price="199">
+            <h3>Product 3</h3>
+            <p class="price">$199</p>
+            <div class="actions">
+                <button>Add to Cart</button>
+            </div>
+        </div>
+        <div class="product" data-price="399">
+            <h3>Product 4</h3>
+            <p class="price">$399</p>
+            <div class="actions">
+                <button>Add to Cart</button>
+            </div>
+        </div>
+    </div>
+<script src="High-to-Low.js"></script>
+</body>
+</html>
