@@ -1,0 +1,42 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  margin: 0;
+}
+
+.product {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.timer {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.time-box {
+  background-color: #ffffff;
+  border: 2px solid #ff0000;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 0 5px;
+  width: 80px;
+  text-align: center;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.time-box span {
+  display: block;
+  font-size: 2em;
+  font-weight: bold;
+  color: #ff0000;
+}
