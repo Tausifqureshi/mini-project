@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   function filterProducts(maxPrice) {
-    console.log(maxPrice);
+    // console.log(maxPrice);
     products.forEach((product) => {
       const productPrice = parseInt(product.getAttribute("data-price"), 10);
       if (productPrice <= maxPrice) {

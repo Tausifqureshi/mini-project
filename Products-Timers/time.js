@@ -20,6 +20,7 @@
 //   }
 // }, 1000);
 
+
 var countDownDate = new Date("Aug 20, 2024 12:00:00").getTime();
 
 var countdownFunction = setInterval(function () {
