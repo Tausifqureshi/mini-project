@@ -8,9 +8,10 @@ function sortProducts() {
     const priceB = parseInt(b.getAttribute("data-price"));
 
     if (filter === "lowToHigh") {
-      return priceA - priceB;
+      return priceA - priceB; // //asendin me sort ye
+     
     } else if (filter === "highToLow") {
-      return priceB - priceA;
+      return priceB - priceA;  //desending me sort ye
     } else {
       return 0;
     }
