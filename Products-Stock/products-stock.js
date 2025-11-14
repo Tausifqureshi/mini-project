@@ -9,7 +9,7 @@ function addToCart() {
         const updatedStock = availableStock - 1;
         stockElement.innerText = updatedStock;
         alert('Product added to cart!');
-
+ 
         if (updatedStock === 0) {
             buttonElement.disabled = true;
             messageElement.style.display = 'block'; // Show the out of stock message

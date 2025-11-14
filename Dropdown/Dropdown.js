@@ -14,5 +14,14 @@ options.forEach((option) => {
     let selectOption = option.querySelector(".option-text").innerText;
     sBtnText.innerText = selectOption;
     console.log(selectOption);
+    if (selectOption === "Github") {
+      window.location.href = "https://github.com";
+    } else if (selectOption === "Instagram") {
+      window.location.href = "https://instagram.com";
+    } else if (selectOption === "Linkedin") {
+      window.location.href = "https://linkedin.com";
+    }
   });
+
 });
+ 

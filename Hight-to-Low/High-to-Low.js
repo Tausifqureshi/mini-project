@@ -9,7 +9,7 @@ function sortProducts() {
 
     if (filter === "lowToHigh") {
       return priceA - priceB; // //asendin me sort ye
-     
+      
     } else if (filter === "highToLow") {
       return priceB - priceA;  //desending me sort ye
     } else {
