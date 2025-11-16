@@ -8,7 +8,7 @@ accordians.forEach((accordian) => {
   accordian.addEventListener("click", () => {
     // icon.classList.toggle("active")
     // answer.classList.toggle("active") //aisa bhi kar sakte hai;
-
+ 
     //=========================================//
     if (icon.classList.contains("active")) {
       //contains batata hai koi class hai ya nhi  ?

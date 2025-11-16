@@ -4,10 +4,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const products = document.querySelectorAll(".product");
 
   priceRange.addEventListener("input", function () {
-    const value = priceRange.value;
-    // console.log(value);
+    const value = priceRange.value; // slider pe jo new value aayi
+    console.log(value);
     priceValue.textContent = `$${value}`;
-    filterProducts(value);
+    filterProducts(value); // us new value ko function ko do
   });
 
   function filterProducts(maxPrice) {
